@@ -11,10 +11,13 @@ scores = input().split()
 
 total = 0
 count = 0
-
+counts = 0
 for s in scores:
   count = count + 1
   total = int(s) + total
   average = total/count
+  if int(s) < 60:
+    counts = counts + 1
 
+print(counts)
 print(average)
