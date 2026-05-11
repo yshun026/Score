@@ -12,6 +12,21 @@ scores = input().split()
 total = 0
 count = 0
 counts = 0
+maxn = int(scores[0])
+minn = int(scores[0])
+
+for s in scores:
+    if int(s) > maxn:
+        maxn = int(s)
+    if int(s) < minn:
+        minn = int(s)
+  count = count + 1
+  total = int(s) + total
+  average = total/count
+  if int(s) < 60:
+    counts = counts + 1
+
+
 for s in scores:
   count = count + 1
   total = int(s) + total
@@ -21,3 +36,4 @@ for s in scores:
 
 print(counts)
 print(average)
+print(f"max: {maxn}, minn: {minn}")
